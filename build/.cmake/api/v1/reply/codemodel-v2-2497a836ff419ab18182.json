@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RTXDDP_Pipe",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_XDDP_NRT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_XDDP_NRT-Release-adbfcceb10b53ac9e118.json",
+					"name" : "RTXDDP_Pipe_XDDP_NRT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_XDDP_RT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_XDDP_RT-Release-ab7c36dac85ae6fa3f4c.json",
+					"name" : "RTXDDP_Pipe_XDDP_RT",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/robot/robot_ws/RTXDDP_Pipe/build",
+		"source" : "/home/robot/robot_ws/RTXDDP_Pipe"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
