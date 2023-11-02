@@ -10,26 +10,7 @@
 
 pthread_t nrt;
 
-#define XDDP_PORT_LABEL  "xddp"
-
-static const char *msg[] = {
-	"Surfing With The Alien",
-	"Lords of Karma",
-	"Banana Mango",
-	"Psycho Monkey",
-	"Luminous Flesh Giants",
-	"Moroccan Sunset",
-	"Satch Boogie",
-	"Flying In A Blue Dream",
-	"Ride",
-	"Summer Song",
-	"Speed Of Light",
-	"Crystal Planet",
-	"Raspberry Jam Delta-V",
-	"Champagne?",
-	"Clouds Race Across The Sky",
-	"Engines Of Creation"
-};
+#define XDDP_PORT 0	/* [0..CONFIG-XENO_OPT_PIPE_NRDEV - 1] */
 
 static void fail(const char *reason)
 {
@@ -42,9 +23,7 @@ static void *regular_thread(void *arg)
 	char buf[128], *devname;
 	int fd, ret;
 
-	if (asprintf(&devname,
-		     "/proc/xenomai/registry/rtipc/xddp/%s",
-		     XDDP_PORT_LABEL) < 0)
+	if (asprintf(&devname, "/dev/rtp%d", XDDP_PORT) < 0)
 		fail("asprintf");
 
 	fd = open(devname, O_RDWR);
@@ -53,12 +32,12 @@ static void *regular_thread(void *arg)
 		fail("open");
 
 	for (;;) {
-		/* Get the next message from realtime_thread2. */
+		/* Get the next message from realtime_thread. */
 		ret = read(fd, buf, sizeof(buf));
 		if (ret <= 0)
 			fail("read");
 
-		/* Relay the message to realtime_thread1. */
+		/* Echo the message back to realtime_thread. */
 		ret = write(fd, buf, ret);
 		if (ret <= 0)
 			fail("write");
