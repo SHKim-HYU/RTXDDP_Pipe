@@ -49,7 +49,7 @@ void rt_task(void *arg) {
 	size_t poolsz;
 	char buf[128];
 
-    rt_task_set_periodic(NULL, TM_NOW, 1000*cycle_ns); // 100ms
+    rt_task_set_periodic(NULL, TM_NOW, 100*cycle_ns); // 100ms
 
 	/*
 	 * Get a datagram socket to bind to the RT endpoint. Each
