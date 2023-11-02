@@ -15,7 +15,9 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
@@ -31,12 +33,28 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_PIPE_NRT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_PIPE_NRT-Release-9b0ef133e857e346331c.json",
+					"name" : "RTXDDP_Pipe_PIPE_NRT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_PIPE_RT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_PIPE_RT-Release-21fd9784b9feacaf414a.json",
+					"name" : "RTXDDP_Pipe_PIPE_RT",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "RTXDDP_Pipe_XDDP_NRT::@6890427a1f51a3e7e1df",
@@ -47,7 +65,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "RTXDDP_Pipe_XDDP_RT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-RTXDDP_Pipe_XDDP_RT-Release-ab7c36dac85ae6fa3f4c.json",
+					"jsonFile" : "target-RTXDDP_Pipe_XDDP_RT-Release-15ace051193b70e6faca.json",
 					"name" : "RTXDDP_Pipe_XDDP_RT",
 					"projectIndex" : 0
 				}

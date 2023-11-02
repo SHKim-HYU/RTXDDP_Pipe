@@ -6,22 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/robot_ws/RTXDDP_Pipe/src/xddp_rt.cpp
-stdio.h
--
-stdlib.h
--
+/home/robot/robot_ws/RTXDDP_Pipe/src/pipe_rt.cpp
 unistd.h
 -
+stdio.h
+-
 signal.h
--
-string.h
--
-malloc.h
--
-fcntl.h
--
-errno.h
 -
 sys/mman.h
 -
@@ -29,11 +19,21 @@ alchemy/task.h
 -
 alchemy/timer.h
 -
-rtdm/ipc.h
+alchemy/pipe.h
 -
 
 /usr/xenomai/include/alchemy/compat.h
 trank/trank.h
+-
+
+/usr/xenomai/include/alchemy/pipe.h
+stdint.h
+-
+cobalt/uapi/kernel/pipe.h
+-
+alchemy/timer.h
+-
+alchemy/compat.h
 -
 
 /usr/xenomai/include/alchemy/task.h
@@ -174,10 +174,6 @@ cobalt/sched.h
 cobalt/wrappers.h
 -
 
-/usr/xenomai/include/cobalt/fcntl.h
-cobalt/wrappers.h
--
-
 /usr/xenomai/include/cobalt/pthread.h
 boilerplate/libc.h
 -
@@ -264,17 +260,9 @@ cobalt/uapi/sem.h
 cobalt/ticks.h
 -
 
-/usr/xenomai/include/cobalt/sys/ioctl.h
-cobalt/wrappers.h
--
-
 /usr/xenomai/include/cobalt/sys/mman.h
 sys/types.h
 -
-cobalt/wrappers.h
--
-
-/usr/xenomai/include/cobalt/sys/socket.h
 cobalt/wrappers.h
 -
 
@@ -449,44 +437,6 @@ cobalt/uapi/kernel/types.h
 -
 sys/time.h
 -
-
-/usr/xenomai/include/rtdm/ipc.h
-rtdm/rtdm.h
--
-rtdm/uapi/ipc.h
--
-
-/usr/xenomai/include/rtdm/rtdm.h
-linux/types.h
--
-sys/ioctl.h
--
-sys/socket.h
--
-fcntl.h
--
-stddef.h
--
-stdint.h
--
-errno.h
--
-unistd.h
--
-boilerplate/wrappers.h
--
-rtdm/uapi/rtdm.h
--
-
-/usr/xenomai/include/rtdm/uapi/ipc.h
-cobalt/uapi/kernel/types.h
--
-cobalt/uapi/kernel/pipe.h
--
-rtdm/rtdm.h
--
-
-/usr/xenomai/include/rtdm/uapi/rtdm.h
 
 /usr/xenomai/include/trank/trank.h
 boilerplate/compiler.h

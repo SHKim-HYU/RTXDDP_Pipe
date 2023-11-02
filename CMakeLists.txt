@@ -134,24 +134,44 @@ target_link_libraries(${XDDP_NRT}
     pthread
 )
 
+# Test for rt pipe
+# Source files
+set(PIPE_RT_SOURCE_FILES
+    src/pipe_rt.cpp
+)
+set(PIPE_NRT_SOURCE_FILES
+    src/pipe_nrt.cpp
+)
+set(PIPE_RT ${PROJECT_NAME}_PIPE_RT)
+set(PIPE_NRT ${PROJECT_NAME}_PIPE_NRT)
+add_executable(${PIPE_RT} ${PIPE_RT_SOURCE_FILES})
+add_executable(${PIPE_NRT} ${PIPE_NRT_SOURCE_FILES})
+
+target_link_libraries(${PIPE_NRT}
+    pthread
+)
 
 # xenomai
-find_package(Xenomai 3.1.1 REQUIRED NATIVE)
+find_package(Xenomai 3.1.1 REQUIRED ALCHEMY)
 message(STATUS "Xenomai found with theses skins: ${Xenomai_SKINS}")
 if(Xenomai_FOUND)
     target_include_directories(${XDDP_RT} PUBLIC ${KERNELHEADERS_DIR})
+    target_include_directories(${PIPE_RT} PUBLIC ${KERNELHEADERS_DIR})
     foreach(comp_lists ${Xenomai_FOUND_COMP})
-        #message(STATUS "Xenomai ${comp_lists} includes : ${Xenomai_${comp_lists}_INCLUDE_DIRS}" )
-        #message(STATUS "Xenomai ${comp_lists} definitions: ${Xenomai_${comp_lists}_DEFINITIONS}")
-        #message(STATUS "Xenomai ${comp_lists} LIBRARY_DIRS : ${Xenomai_${comp_lists}_LIBRARY_DIRS} ")
-        #message(STATUS "Xenomai ${comp_lists} LIBRARIES : ${Xenomai_${comp_lists}_LIBRARIES}")
-        #message(STATUS "Xenomai ${comp_lists} LDFLAGS : ${Xenomai_${comp_lists}_LDFLAGS}")
-        #message(STATUS "Xenomai ${comp_lists} DL_FLAGS : ${Xenomai_${comp_lists}_DL_FLAGS}")
+        message(STATUS "Xenomai ${comp_lists} includes : ${Xenomai_${comp_lists}_INCLUDE_DIRS}" )
+        message(STATUS "Xenomai ${comp_lists} definitions: ${Xenomai_${comp_lists}_DEFINITIONS}")
+        message(STATUS "Xenomai ${comp_lists} LIBRARY_DIRS : ${Xenomai_${comp_lists}_LIBRARY_DIRS} ")
+        message(STATUS "Xenomai ${comp_lists} LIBRARIES : ${Xenomai_${comp_lists}_LIBRARIES}")
+        message(STATUS "Xenomai ${comp_lists} LDFLAGS : ${Xenomai_${comp_lists}_LDFLAGS}")
+        message(STATUS "Xenomai ${comp_lists} DL_FLAGS : ${Xenomai_${comp_lists}_DL_FLAGS}")
 
         target_include_directories(${XDDP_RT} PUBLIC ${Xenomai_${comp_lists}_INCLUDE_DIRS})
+        target_include_directories(${PIPE_RT} PUBLIC ${Xenomai_${comp_lists}_INCLUDE_DIRS})
         # target_link_libraries(${PROJECT_NAME} PUBLIC ${Xenomai_${comp_lists}_LIBRARY_DIRS} ${Xenomai_${comp_lists}_LIBRARIES})
-        target_link_libraries(${XDDP_RT} ${Xenomai_${comp_lists}_DL_FLAGS})
+        target_link_libraries(${XDDP_RT} ${Xenomai_${comp_lists}_DL_FLAGS} ${Xenomai_${comp_lists}_LIBRARIES})
+        target_link_libraries(${PIPE_RT} ${Xenomai_${comp_lists}_DL_FLAGS} ${Xenomai_${comp_lists}_LIBRARIES})
         set_target_properties(${XDDP_RT} PROPERTIES COMPILE_FLAGS ${Xenomai_${comp_lists}_DEFINITIONS})
+        set_target_properties(${PIPE_RT} PROPERTIES COMPILE_FLAGS ${Xenomai_${comp_lists}_DEFINITIONS})
     endforeach(comp_lists ${Xenomai_SKINS})
 endif(Xenomai_FOUND)
 

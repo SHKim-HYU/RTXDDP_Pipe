@@ -1,0 +1,1 @@
+/usr/bin/g++   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   CMakeFiles/RTXDDP_Pipe_PIPE_NRT.dir/src/pipe_nrt.cpp.o  -o RTXDDP_Pipe_PIPE_NRT  -lpthread 

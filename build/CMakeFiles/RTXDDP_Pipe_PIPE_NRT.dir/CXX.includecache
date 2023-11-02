@@ -6,23 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp
-stdio.h
+/home/robot/robot_ws/RTXDDP_Pipe/src/pipe_nrt.cpp
+iostream
 -
-stdlib.h
--
-unistd.h
--
-signal.h
--
-string.h
--
-malloc.h
--
-pthread.h
+thread
 -
 fcntl.h
 -
-errno.h
+unistd.h
+-
+cstring
 -
 

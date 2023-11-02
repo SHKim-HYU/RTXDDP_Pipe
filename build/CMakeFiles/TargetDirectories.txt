@@ -1,4 +1,6 @@
 /home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/rebuild_cache.dir
 /home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/edit_cache.dir
+/home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/RTXDDP_Pipe_PIPE_NRT.dir
+/home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir
 /home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir
 /home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles/RTXDDP_Pipe_XDDP_RT.dir

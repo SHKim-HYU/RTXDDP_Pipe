@@ -31,13 +31,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 142,
+				"line" : 158,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 151,
+				"line" : 168,
 				"parent" : 0
 			}
 		]
@@ -51,7 +51,7 @@
 					"fragment" : " -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG  "
 				},
 				{
-					"fragment" : "-D__XENO_COMPAT__ -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__"
+					"fragment" : "-D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__"
 				},
 				{
 					"fragment" : "-std=c++17"
@@ -68,10 +68,6 @@
 				{
 					"backtrace" : 2,
 					"path" : "/usr/src/linux-headers-5.4.239-xenomai-3.2.3+"
-				},
-				{
-					"backtrace" : 3,
-					"path" : "/usr/xenomai/include/trank"
 				},
 				{
 					"backtrace" : 3,
@@ -107,7 +103,31 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,--no-as-needed -ltrank -Wl,@/usr/xenomai/lib/modechk.wrappers -lalchemy -lcopperplate /usr/xenomai/lib/xenomai/bootstrap.o -Wl,--wrap=main -Wl,--dynamic-list=/usr/xenomai/lib/dynlist.ld -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt",
+				"fragment" : "-Wl,--no-as-needed -Wl,@/usr/xenomai/lib/modechk.wrappers -lalchemy -lcopperplate /usr/xenomai/lib/xenomai/bootstrap.o -Wl,--wrap=main -Wl,--dynamic-list=/usr/xenomai/lib/dynlist.ld -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lalchemy",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcopperplate",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcobalt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmodechk",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
 				"role" : "libraries"
 			}
 		],

@@ -1,0 +1,163 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "RTXDDP_Pipe_PIPE_RT"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 147,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 159,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG  "
+				},
+				{
+					"fragment" : "-D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__"
+				},
+				{
+					"fragment" : "-std=c++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "/home/robot/robot_ws/RTXDDP_Pipe/build"
+				},
+				{
+					"path" : "/home/robot/robot_ws/RTXDDP_Pipe"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/usr/src/linux-headers-5.4.239-xenomai-3.2.3+"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/usr/xenomai/include/cobalt"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/usr/xenomai/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/usr/xenomai/include/alchemy"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "RTXDDP_Pipe_PIPE_RT::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,--no-as-needed -Wl,@/usr/xenomai/lib/modechk.wrappers -lalchemy -lcopperplate /usr/xenomai/lib/xenomai/bootstrap.o -Wl,--wrap=main -Wl,--dynamic-list=/usr/xenomai/lib/dynlist.ld -L/usr/xenomai/lib -lcobalt -lmodechk -lpthread -lrt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lalchemy",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcopperplate",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcobalt",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmodechk",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "RTXDDP_Pipe_PIPE_RT",
+	"nameOnDisk" : "RTXDDP_Pipe_PIPE_RT",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/pipe_rt.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -1471,7 +1471,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/xenomai/include/trank;/usr/xenomai/include/cobalt;/usr/xenomai/include;/usr/xenomai/include/alchemy][trank;alchemy;copperplate;cobalt;modechk;pthread;rt][cfound components: NATIVE ][v3.2.3(3.1.1)]"
+			"value" : "[/usr/xenomai/include/cobalt;/usr/xenomai/include;/usr/xenomai/include/alchemy][alchemy;copperplate;cobalt;modechk;pthread;rt][cfound components: ALCHEMY ][v3.2.3(3.1.1)]"
 		},
 		{
 			"name" : "KERNELHEADERS_DIR",
