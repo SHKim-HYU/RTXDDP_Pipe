@@ -60,15 +60,15 @@ include CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/flags.make
 CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o: CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/flags.make
 CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o: ../src/xddp_nrt.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robot/robot_ws/RTXDDP_Pipe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp
 
 CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp > CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp > CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.i
 
 CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp -o CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp -o CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.s
 
 # Object files for target RTXDDP_Pipe_XDDP_NRT
 RTXDDP_Pipe_XDDP_NRT_OBJECTS = \

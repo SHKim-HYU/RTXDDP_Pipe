@@ -117,6 +117,16 @@ set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELEASE} ${CMAKE_CXX_FLAGS
 set(CMAKE_CXX_FLAGS_PROFILE "${CMAKE_CXX_FLAGS_DEBUG} -pg")
 set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined")
 
+
+# Test for IDDP
+# Source files
+set(IDDP_RT_SOURCE_FILES
+    src/iddp_rt.cpp
+)
+set(IDDP_RT ${PROJECT_NAME}_IDDP_RT)
+add_executable(${IDDP_RT} ${IDDP_RT_SOURCE_FILES})
+
+
 # Test for XDDP
 # Source files
 set(XDDP_RT_SOURCE_FILES
@@ -157,6 +167,7 @@ message(STATUS "Xenomai found with theses skins: ${Xenomai_SKINS}")
 if(Xenomai_FOUND)
     target_include_directories(${XDDP_RT} PUBLIC ${KERNELHEADERS_DIR})
     target_include_directories(${PIPE_RT} PUBLIC ${KERNELHEADERS_DIR})
+    target_include_directories(${IDDP_RT} PUBLIC ${KERNELHEADERS_DIR})
     foreach(comp_lists ${Xenomai_FOUND_COMP})
         message(STATUS "Xenomai ${comp_lists} includes : ${Xenomai_${comp_lists}_INCLUDE_DIRS}" )
         message(STATUS "Xenomai ${comp_lists} definitions: ${Xenomai_${comp_lists}_DEFINITIONS}")
@@ -167,10 +178,13 @@ if(Xenomai_FOUND)
 
         target_include_directories(${XDDP_RT} PUBLIC ${Xenomai_${comp_lists}_INCLUDE_DIRS})
         target_include_directories(${PIPE_RT} PUBLIC ${Xenomai_${comp_lists}_INCLUDE_DIRS})
+        target_include_directories(${IDDP_RT} PUBLIC ${Xenomai_${comp_lists}_INCLUDE_DIRS})                
         # target_link_libraries(${PROJECT_NAME} PUBLIC ${Xenomai_${comp_lists}_LIBRARY_DIRS} ${Xenomai_${comp_lists}_LIBRARIES})
         target_link_libraries(${XDDP_RT} ${Xenomai_${comp_lists}_DL_FLAGS} ${Xenomai_${comp_lists}_LIBRARIES})
+        target_link_libraries(${IDDP_RT} ${Xenomai_${comp_lists}_DL_FLAGS} ${Xenomai_${comp_lists}_LIBRARIES})        
         target_link_libraries(${PIPE_RT} ${Xenomai_${comp_lists}_DL_FLAGS} ${Xenomai_${comp_lists}_LIBRARIES})
         set_target_properties(${XDDP_RT} PROPERTIES COMPILE_FLAGS ${Xenomai_${comp_lists}_DEFINITIONS})
+        set_target_properties(${IDDP_RT} PROPERTIES COMPILE_FLAGS ${Xenomai_${comp_lists}_DEFINITIONS})        
         set_target_properties(${PIPE_RT} PROPERTIES COMPILE_FLAGS ${Xenomai_${comp_lists}_DEFINITIONS})
     endforeach(comp_lists ${Xenomai_SKINS})
 endif(Xenomai_FOUND)

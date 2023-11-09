@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -124,19 +124,6 @@ RTXDDP_Pipe_PIPE_NRT/fast:
 .PHONY : RTXDDP_Pipe_PIPE_NRT/fast
 
 #=============================================================================
-# Target rules for targets named RTXDDP_Pipe_PIPE_RT
-
-# Build rule for target.
-RTXDDP_Pipe_PIPE_RT: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 RTXDDP_Pipe_PIPE_RT
-.PHONY : RTXDDP_Pipe_PIPE_RT
-
-# fast build rule for target.
-RTXDDP_Pipe_PIPE_RT/fast:
-	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir/build
-.PHONY : RTXDDP_Pipe_PIPE_RT/fast
-
-#=============================================================================
 # Target rules for targets named RTXDDP_Pipe_XDDP_NRT
 
 # Build rule for target.
@@ -161,6 +148,59 @@ RTXDDP_Pipe_XDDP_RT: cmake_check_build_system
 RTXDDP_Pipe_XDDP_RT/fast:
 	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_XDDP_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_XDDP_RT.dir/build
 .PHONY : RTXDDP_Pipe_XDDP_RT/fast
+
+#=============================================================================
+# Target rules for targets named RTXDDP_Pipe_PIPE_RT
+
+# Build rule for target.
+RTXDDP_Pipe_PIPE_RT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RTXDDP_Pipe_PIPE_RT
+.PHONY : RTXDDP_Pipe_PIPE_RT
+
+# fast build rule for target.
+RTXDDP_Pipe_PIPE_RT/fast:
+	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir/build
+.PHONY : RTXDDP_Pipe_PIPE_RT/fast
+
+#=============================================================================
+# Target rules for targets named RTXDDP_Pipe_IDDP_RT
+
+# Build rule for target.
+RTXDDP_Pipe_IDDP_RT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RTXDDP_Pipe_IDDP_RT
+.PHONY : RTXDDP_Pipe_IDDP_RT
+
+# fast build rule for target.
+RTXDDP_Pipe_IDDP_RT/fast:
+	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/build
+.PHONY : RTXDDP_Pipe_IDDP_RT/fast
+
+src/iddp_rt.o: src/iddp_rt.cpp.o
+
+.PHONY : src/iddp_rt.o
+
+# target to build an object file
+src/iddp_rt.cpp.o:
+	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/src/iddp_rt.cpp.o
+.PHONY : src/iddp_rt.cpp.o
+
+src/iddp_rt.i: src/iddp_rt.cpp.i
+
+.PHONY : src/iddp_rt.i
+
+# target to preprocess a source file
+src/iddp_rt.cpp.i:
+	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/src/iddp_rt.cpp.i
+.PHONY : src/iddp_rt.cpp.i
+
+src/iddp_rt.s: src/iddp_rt.cpp.s
+
+.PHONY : src/iddp_rt.s
+
+# target to generate assembly for a file
+src/iddp_rt.cpp.s:
+	$(MAKE) -f CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/build.make CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/src/iddp_rt.cpp.s
+.PHONY : src/iddp_rt.cpp.s
 
 src/pipe_nrt.o: src/pipe_nrt.cpp.o
 
@@ -279,9 +319,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RTXDDP_Pipe_PIPE_NRT"
-	@echo "... RTXDDP_Pipe_PIPE_RT"
 	@echo "... RTXDDP_Pipe_XDDP_NRT"
 	@echo "... RTXDDP_Pipe_XDDP_RT"
+	@echo "... RTXDDP_Pipe_PIPE_RT"
+	@echo "... RTXDDP_Pipe_IDDP_RT"
+	@echo "... src/iddp_rt.o"
+	@echo "... src/iddp_rt.i"
+	@echo "... src/iddp_rt.s"
 	@echo "... src/pipe_nrt.o"
 	@echo "... src/pipe_nrt.i"
 	@echo "... src/pipe_nrt.s"
