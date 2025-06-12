@@ -1,0 +1,95 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RTXDDP_Pipe",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_IDDP_RT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_IDDP_RT-Release-2473f22b68a12eb28775.json",
+					"name" : "RTXDDP_Pipe_IDDP_RT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_PIPE_NRT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_PIPE_NRT-Release-cb6f3145a6d6aaa3f890.json",
+					"name" : "RTXDDP_Pipe_PIPE_NRT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_PIPE_RT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_PIPE_RT-Release-24b7b0a90c473ae7172c.json",
+					"name" : "RTXDDP_Pipe_PIPE_RT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_XDDP_NRT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_XDDP_NRT-Release-d5a19077f5aed4fec100.json",
+					"name" : "RTXDDP_Pipe_XDDP_NRT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RTXDDP_Pipe_XDDP_RT::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RTXDDP_Pipe_XDDP_RT-Release-45d58c726f1acafd75f4.json",
+					"name" : "RTXDDP_Pipe_XDDP_RT",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/robot/robot_ws/RTXDDP_Pipe/build",
+		"source" : "/home/robot/robot_ws/RTXDDP_Pipe"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

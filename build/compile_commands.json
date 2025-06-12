@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/robot/robot_ws/RTXDDP_Pipe/build",
+  "command": "/usr/bin/g++   -I/home/robot/robot_ws/RTXDDP_Pipe/build -I/home/robot/robot_ws/RTXDDP_Pipe   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   -std=c++17 -o CMakeFiles/RTXDDP_Pipe_PIPE_NRT.dir/src/pipe_nrt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/pipe_nrt.cpp",
+  "file": "/home/robot/robot_ws/RTXDDP_Pipe/src/pipe_nrt.cpp"
+},
+{
+  "directory": "/home/robot/robot_ws/RTXDDP_Pipe/build",
+  "command": "/usr/bin/g++   -I/home/robot/robot_ws/RTXDDP_Pipe/build -I/home/robot/robot_ws/RTXDDP_Pipe   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   -std=c++17 -o CMakeFiles/RTXDDP_Pipe_XDDP_NRT.dir/src/xddp_nrt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp",
+  "file": "/home/robot/robot_ws/RTXDDP_Pipe/src/xddp_nrt.cpp"
+},
+{
+  "directory": "/home/robot/robot_ws/RTXDDP_Pipe/build",
+  "command": "/usr/bin/g++   -I/home/robot/robot_ws/RTXDDP_Pipe/build -I/home/robot/robot_ws/RTXDDP_Pipe -I/usr/src/linux-headers-5.4.239-xenomai-3.2.3+ -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -I/usr/xenomai/include/alchemy   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -std=c++17 -o CMakeFiles/RTXDDP_Pipe_XDDP_RT.dir/src/xddp_rt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/xddp_rt.cpp",
+  "file": "/home/robot/robot_ws/RTXDDP_Pipe/src/xddp_rt.cpp"
+},
+{
+  "directory": "/home/robot/robot_ws/RTXDDP_Pipe/build",
+  "command": "/usr/bin/g++   -I/home/robot/robot_ws/RTXDDP_Pipe/build -I/home/robot/robot_ws/RTXDDP_Pipe -I/usr/src/linux-headers-5.4.239-xenomai-3.2.3+ -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -I/usr/xenomai/include/alchemy   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -std=c++17 -o CMakeFiles/RTXDDP_Pipe_PIPE_RT.dir/src/pipe_rt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/pipe_rt.cpp",
+  "file": "/home/robot/robot_ws/RTXDDP_Pipe/src/pipe_rt.cpp"
+},
+{
+  "directory": "/home/robot/robot_ws/RTXDDP_Pipe/build",
+  "command": "/usr/bin/g++   -I/home/robot/robot_ws/RTXDDP_Pipe/build -I/home/robot/robot_ws/RTXDDP_Pipe -I/usr/src/linux-headers-5.4.239-xenomai-3.2.3+ -I/usr/xenomai/include/cobalt -I/usr/xenomai/include -I/usr/xenomai/include/alchemy   -std=c++17 -Wall -Wextra -fPIC -O2 -DNDEBUG   -D_GNU_SOURCE -D_REENTRANT -fasynchronous-unwind-tables -D__COBALT__ -std=c++17 -o CMakeFiles/RTXDDP_Pipe_IDDP_RT.dir/src/iddp_rt.cpp.o -c /home/robot/robot_ws/RTXDDP_Pipe/src/iddp_rt.cpp",
+  "file": "/home/robot/robot_ws/RTXDDP_Pipe/src/iddp_rt.cpp"
+}
+]
